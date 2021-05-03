@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Post } from 'src/app/models/post.model';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
