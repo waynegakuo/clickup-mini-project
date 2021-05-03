@@ -14,7 +14,6 @@ import { FilterPost } from './../../../states/post.action';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-  users;
   posts;
   posts$: Observable<any>;
 
