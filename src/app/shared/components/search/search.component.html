@@ -1,0 +1,8 @@
+<div class="flex flex-row pb-4 md:w-max items-center float-right">
+  <form class="flex my-3 px-4" [formGroup]="searchForm" (ngSubmit)="search(searchForm.get('id').value)">
+    <input type="text"
+      class="w-full rounded-l py-1.5 px-4 outline-none focus:bg-indigo-100 focus:transition ease-in duration-150"
+      placeholder="Search Post by ID" formControlName="id">
+    <button type="submit" class="bg-black rounded-r px-4 text-white font-semibold">Search</button>
+  </form>
+</div>

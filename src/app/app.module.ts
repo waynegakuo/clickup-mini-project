@@ -17,13 +17,16 @@ import { TableComponent } from './shared/components/table/table.component';
 import { HttpClientModule } from '@angular/common/http';
 import { postReducer } from './states/post.reducer';
 import { PostEffect } from './states/post.effects';
+import { SearchComponent } from './shared/components/search/search.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     NavbarComponent,
-    TableComponent
+    TableComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,9 @@ import { PostEffect } from './states/post.effects';
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production
-    })
+    }),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

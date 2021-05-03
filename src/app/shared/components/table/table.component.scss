@@ -4,10 +4,23 @@ table {
   cursor: pointer;
 }
 
+.resize-box {
+  resize: both;
+  overflow: hidden;
+}
+
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+}
+
+td div, th div {
+  border: 0;
+  width: auto;
+  height: auto;
+  min-height: 20px;
+  min-width: 20px;
 }
 
 tr:nth-child(even) {

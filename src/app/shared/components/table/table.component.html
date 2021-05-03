@@ -1,10 +1,13 @@
+<app-search (searchPost)="searchUser($event)"></app-search>
 <div class="flex items-center justify-center md:inline-flex mt-8">
   <table>
     <!-- Columns -->
     <tr cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="dropCol($event)">
       <ng-container *ngFor="let column of columns let i = index">
         <th cdkDrag cdkDragLockAxis="x">
-          {{column.columnName}}
+          <div class="resize-box">
+            {{column.columnName}}
+          </div>
         </th>
       </ng-container>
     </tr>
@@ -13,7 +16,11 @@
     <tr *ngFor="let post of posts$ | async">
       <ng-container *ngFor=" let data of columns">
         <ng-container>
-          <td>{{post[data.fieldName]}}</td>
+          <td>
+            <div class="resize-box">
+            {{post[data.fieldName]}}
+          </div>
+        </td>
         </ng-container>
       </ng-container>
     </tr>

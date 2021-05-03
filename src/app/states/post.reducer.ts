@@ -45,7 +45,7 @@ export const getPostList = createSelector(
   getPostFeatureSelector,
   state => {
     if (state.idFilter.id > 0) {
-      return state.posts.filter(post => post.id >= state.idFilter.id);
+      return state.posts.filter(post => post.id == state.idFilter.id);
     }
     else {
       return state.posts;

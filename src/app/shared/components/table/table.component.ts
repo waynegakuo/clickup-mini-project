@@ -6,6 +6,7 @@ import { PostsService } from 'src/app/services/posts/posts.service';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { getPostList } from 'src/app/states/post.reducer';
 import { PostLoad } from 'src/app/states/post.action';
+import { FilterPost } from './../../../states/post.action';
 
 @Component({
   selector: 'app-table',
@@ -36,4 +37,13 @@ export class TableComponent implements OnInit {
     moveItemInArray(this.columns, event.previousIndex, event.currentIndex);
   }
 
+  /**
+   * Search for Post
+   * @param postId id of the post provided
+   */
+  searchUser(postId: number): void {
+    this.store.dispatch(FilterPost({
+      id: postId
+    }));
+  }
 }
