@@ -15,6 +15,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { TableComponent } from './shared/components/table/table.component';
 import { HttpClientModule } from '@angular/common/http';
+import { postReducer } from './states/post.reducer';
+import { PostEffect } from './states/post.effects';
 
 @NgModule({
   declarations: [
@@ -31,8 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatMenuModule,
     DragDropModule,
-    StoreModule.forRoot({}),
-    EffectsModule.forRoot([]),
+    StoreModule.forRoot({posts: postReducer}),
+    EffectsModule.forRoot([PostEffect]),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production
