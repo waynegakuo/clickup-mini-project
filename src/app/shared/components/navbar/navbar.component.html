@@ -1,0 +1,18 @@
+<nav class="nav-bar">
+  <div class="flex flex-row items-center content-start justify-start">
+    <img src="assets/images/icons/posts.svg" [routerLink]="['']" alt="Posts Icon" class="w-1/2">
+    <a class="home-link" [routerLink]="['']" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">ClickUp Posts</a>
+  </div>
+
+  <mat-icon class="burger" [matMenuTriggerFor]="menu">menu</mat-icon>
+
+  <ul>
+    <li><a class="register" href="" target="_blank" rel="noopener noreferrer"
+        class="nav_link">GitHub Repo</a><span class="isactive"></span></li>
+
+    <mat-menu #menu="matMenu">
+      <a mat-menu-item class="register" href="https://github.com/waynegakuo/devfestkenya" target="_blank"
+        rel="noopener noreferrer">GitHub Repo</a>
+    </mat-menu>
+  </ul>
+</nav>
