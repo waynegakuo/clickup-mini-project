@@ -9,21 +9,25 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class SearchComponent implements OnInit {
 
-  postId;
+  // Send the info up to the parent component
   @Output() searchPost = new EventEmitter<number>();
 
   constructor(private fb: FormBuilder) { }
 
+  // Reactive form for our search section
   searchForm = this.fb.group({
-    id: ['', Validators.required]
+    id: ['']
   });
 
   ngOnInit(): void {
   }
 
+  /**
+   * This function 'bubbles up' the post ID provided to the parent component (Table)
+   * @param id post ID
+   */
   search(id): void {
     console.log(id);
     this.searchPost.emit(id);
   }
-
 }

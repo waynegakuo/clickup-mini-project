@@ -39,6 +39,7 @@ export class TableComponent implements OnInit {
 
   /**
    * Search for Post
+   * Receives the postID from the child component (search)
    * @param postId id of the post provided
    */
   searchUser(postId: number): void {

@@ -1,3 +1,5 @@
+@import "../../../../color";
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -7,6 +9,11 @@ table {
 .resize-box {
   resize: both;
   overflow: hidden;
+}
+
+th {
+  background: $primary;
+  color: white;
 }
 
 td, th {
@@ -20,9 +27,9 @@ td div, th div {
   width: auto;
   height: auto;
   min-height: 20px;
-  min-width: 20px;
+  min-width: 100px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+tr:nth-child(odd) {
+  background-color: $secondary;
 }

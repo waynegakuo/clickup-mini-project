@@ -1,5 +1,4 @@
 @import "../../../../color";
-@import "../../../../margins";
 
 mat-icon {
     cursor: pointer;
@@ -22,7 +21,7 @@ mat-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10px;
+    padding: 5px 10px;
     overflow: hidden;
 
     img {

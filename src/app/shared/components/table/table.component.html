@@ -1,5 +1,5 @@
 <app-search (searchPost)="searchUser($event)"></app-search>
-<div class="flex items-center justify-center md:inline-flex mt-8">
+<div class="flex items-center justify-center md:inline-flex">
   <table>
     <!-- Columns -->
     <tr cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="dropCol($event)">
@@ -18,9 +18,9 @@
         <ng-container>
           <td>
             <div class="resize-box">
-            {{post[data.fieldName]}}
-          </div>
-        </td>
+              {{post[data.fieldName]}}
+            </div>
+          </td>
         </ng-container>
       </ng-container>
     </tr>
